@@ -5,6 +5,7 @@ import Search from "./pages/search"
 import GifPage from "./pages/single-gif"
 import AppLayout from "./layout/app-layout"
 import Home from "./pages/home"
+import GifProvider from "./context/gif-context"
 
 
 const router = createBrowserRouter([
@@ -39,7 +40,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <GifProvider>
+      <RouterProvider router={router} />
+    </GifProvider>
   )
 }
 
